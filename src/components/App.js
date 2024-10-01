@@ -1,9 +1,13 @@
 import logo from '../rsc/logo.svg';
 import '../css/App.css';
+import { useContext } from 'react';
+import { Context } from '../context/ContextProvider';
 
 function App() {
+  const picsDb = useContext(Context);
   return (
     <div className="App">
+      {console.log(picsDb)}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

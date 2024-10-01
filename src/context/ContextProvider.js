@@ -7,25 +7,22 @@ import { db } from '../firebase/firebase';
 export const Context = createContext();
 
 function ContextProvider({ children }) {
-
   const [picsDb, setPicsDb] = useState([]);
 
-  const picsCollectionRef = collection(db, 'products');
+  const picsCollectionRef = collection(db, 'pics');
 
   useEffect(() => {
     const getpics = async () => {
       const data = await getDocs(picsCollectionRef);
-      setPicsDb(data.docs.map(doc => doc.data()));
+      setPicsDb(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
     };
 
     getpics();
   }, []);
 
   return (
-    <Context.Provider
-      value={ picsDb }
-    >
-      { children }
+    <Context.Provider value={picsDb}>
+      {children}
     </Context.Provider>
   );
 }
