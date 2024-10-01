@@ -1,18 +1,17 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
 
-
 export default [
-  {languageOptions: { globals: globals.browser }},
+  { languageOptions: { globals: globals.browser } },
   {
     ignores: [".config/*", "eslint.config.mjs", "jest.config.js"]
   },
   {
-    "files": ["tests/**/*"],
-      "env": {
-        "jest": true
+    files: ["tests/**/*"],
+    env: {
+      jest: true
     },
-    },
+  },
   {
     rules: {
       "quotes": ["error", "single"],
@@ -34,7 +33,12 @@ export default [
       "arrow-spacing": ["error", { "before": true, "after": true }],
       "no-multiple-empty-lines": ["error", { "max": 1 }],
       "block-spacing": ["error", "always"],
-  }
+    }
+  },
+  {
+    globals: {
+      process: 'readonly',
+    },
   },
   pluginJs.configs.recommended,
 ];
