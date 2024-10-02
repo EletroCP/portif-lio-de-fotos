@@ -1,5 +1,5 @@
 import '../css/App.css';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { Context } from '../context/ContextProvider';
 import UploadImage from './UploadImage';
 import PhotoCard from './PhotoCard';
