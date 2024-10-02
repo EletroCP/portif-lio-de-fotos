@@ -2,6 +2,7 @@ import logo from '../rsc/logo.svg';
 import '../css/App.css';
 import { useContext, useEffect } from 'react';
 import { Context } from '../context/ContextProvider';
+import UploadImage from './UploadImage';
 
 function App() {
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
           Fotos
         </h1>
       </div>
+      <UploadImage/>
       <div id='images-container'>
         {picsDb.map(({name, descricao, link, data}, index) => (
           <div key={`${name}-${index}`} className='image-container'>
