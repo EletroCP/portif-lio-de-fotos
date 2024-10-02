@@ -11,7 +11,7 @@ function ContextProvider({ children }) {
 
   
   const picsCollectionRef = useMemo(() => {
-    const picsFirebaseRef = collection(db, 'pics');
+    const picsFirebaseRef = collection(db, 'picsDb');
     
     return picsFirebaseRef;
   }, []);
