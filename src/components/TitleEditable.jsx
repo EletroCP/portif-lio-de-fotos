@@ -1,9 +1,9 @@
 import React from "react";
 
-const Title = ({titleText}) => {
+const TitleEditable = ({titleText}) => {
     return (
         <h1>{titleText}</h1>
     )
 };
 
-export default Title
+export default TitleEditable
