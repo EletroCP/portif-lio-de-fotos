@@ -17,7 +17,7 @@ const PhotoCard = ({ photo }) => {
   return (
     <div id="photo-card">
       <img src={photo.link} alt={photo.descricao} id='photo-card-image'/>
-      <p id='photo-card-description'>{photo.descricao}</p>
+      <p id='photo-card-data'>{photo.data}</p>
       <button onClick={handleDelete} id='photo-card-delete'>Excluir Foto</button>
     </div>
   );
