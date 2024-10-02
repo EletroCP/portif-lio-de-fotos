@@ -2,6 +2,7 @@ import '../css/App.css';
 import { useContext, useEffect, useState } from 'react';
 import { Context } from '../context/ContextProvider';
 import UploadImage from './UploadImage';
+import PhotoCard from './PhotoCard';
 
 function App() {
   useEffect(() => {
@@ -82,10 +83,9 @@ function App() {
       </div>
       <UploadImage/>
       <div id='images-container'>
-        {picsDb.map(({name, descricao, link, data}, index) => (
-          <div key={`${name}-${index}`} className='image-container'>
-            <img alt={descricao} src={link} />
-            <p>{data}</p>
+        {picsDb.map((photo) => (
+          <div key={photo.id} className='image-container'>
+            <PhotoCard id={photo.id} photo={photo} />
           </div>
         ))}
       </div>
