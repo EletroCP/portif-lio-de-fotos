@@ -1,16 +1,17 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from '../pages/App';
+import Galery from '../pages/Galery';
 
-const Router = () => {
+const RouterComponent = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={ <Navigate replace to="/main" /> } />
-        <Route path="/main" element={ <App /> } />
+        <Route path="/" element={<Galery />} />
+        <Route path="/adm" element={<App />} />
       </Routes>
     </BrowserRouter>
   );
 };
 
-export default Router;
+export default RouterComponent;
