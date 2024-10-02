@@ -1,5 +1,6 @@
 #header-container {
-  background-image: linear-gradient(135deg, #fdacdc, #ffcccc, #f460a2)
+  background-image: linear-gradient(135deg, #fdacdc, #ffcccc, #f460a2);
+  
 }
 
 #nav-container {
@@ -13,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 2vw;
+  padding-left: 3.5vw;
 }
 
 #camicon {
@@ -52,7 +53,7 @@
 #author-name-container {
   display: flex;
   color: white;
-  padding-left: 7vw;
+  padding-left: 9vw;
   padding-top: 5px;
   font-size: 22px;
 }
@@ -61,7 +62,30 @@
   font-size: 50px;
   position: absolute;
   font-size: 100px;
-  left: 20vw;
-  top: 90px;
+  left: 30vw;
+  top: 73px;
   color: #eb32a7;
+  font-family: "Satisfy", cursive;
  }
+
+ #sub-header {
+  background-color: white;
+  margin-top: 20px;
+}
+
+#patron-name-container {
+  display: block;
+  padding-left: 80vw;
+}
+
+#patron-label{
+  color: #eb32a7;
+  font-size: 22px;
+}
+
+#patron-name {
+  color: #eb32a7;
+  font-size: 22px;
+  font-weight: bold;
+  padding-left: 55px;
+}

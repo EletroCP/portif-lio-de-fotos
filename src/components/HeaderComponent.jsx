@@ -19,9 +19,11 @@ const HeaderComponent = () => {
         <p id="author-label">Fotos tiradas por</p>
         <p id="author-name">Andrey</p>
       </div>
-      <div id="patron-name-container">
-        <p id="patron-label">Patrocinio</p>
-        <p id="patron-name">Andrey</p>
+      <div id='sub-header'>
+        <div id="patron-name-container">
+          <p id="patron-label">Patrocinio</p>
+          <p id="patron-name">Andrey</p>
+        </div>
       </div>
     </div>
   )
