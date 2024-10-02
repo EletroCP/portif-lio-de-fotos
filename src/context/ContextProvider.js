@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { createContext } from 'react';
 import PropTypes from 'prop-types';
 import { getDocs, collection } from 'firebase/firestore';
@@ -9,16 +9,21 @@ export const Context = createContext();
 function ContextProvider({ children }) {
   const [picsDb, setPicsDb] = useState([]);
 
-  const picsCollectionRef = collection(db, 'pics');
+  
+  const picsCollectionRef = useMemo(() => {
+    const picsFirebaseRef = collection(db, 'pics');
+    
+    return picsFirebaseRef;
+  }, []);
 
   useEffect(() => {
     const getpics = async () => {
       const data = await getDocs(picsCollectionRef);
-      setPicsDb(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+      setPicsDb(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
     getpics();
-  }, []);
+  }, [picsCollectionRef]);
 
   return (
     <Context.Provider value={picsDb}>
