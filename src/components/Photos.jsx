@@ -6,6 +6,7 @@ const Photos = () => {
 
   return(
     <div id="photos-main-container">
+      <h1>Fotos da Praia</h1>
       {
         picsDb.map(({id, link, descricao}) => (
           <div key={id}>
