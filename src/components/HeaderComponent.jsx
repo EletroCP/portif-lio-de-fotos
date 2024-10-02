@@ -1,15 +1,19 @@
 import React from "react";
+import '../css/HeaderGalery.css'
+import camIcont from '../rsc/camicon.png'
 
 const HeaderComponent = () => {
   return (
     <div id="header-container">
-      <div id="home-icon">
-
-      </div>
       <div id="nav-container">
-          <p className="nav-button">Sobre</p>
-          <p className="nav-button">Fotos</p>
-          <p className="nav-button">Editar</p>
+        <div id="home-icon-container">
+          <img src={camIcont} alt="Icone de câmera" id="camicon"/>
+        </div>
+        <nav id="nav-links-container">
+            <p className="nav-button">Sobre</p>
+            <p className="nav-button">Fotos</p>
+            <p className="nav-button">Editar</p>
+        </nav>
       </div>
       <div id="author-name-container">
         <p id="author-label">Fotos tiradas por</p>
