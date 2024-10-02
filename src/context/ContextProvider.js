@@ -1,32 +1,36 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createContext } from 'react';
 import PropTypes from 'prop-types';
-import { getDocs, collection } from 'firebase/firestore';
 import { db } from '../firebase/firebase';
-
+import { useFirestoreCollection } from '../firebase/CRUDFirebase'; 
 export const Context = createContext();
 
 function ContextProvider({ children }) {
   const [picsDb, setPicsDb] = useState([]);
+  const [galeryDb, setGaleryDb] = useState([]);
 
-  
-  const picsCollectionRef = useMemo(() => {
-    const picsFirebaseRef = collection(db, 'picsDb');
-    
-    return picsFirebaseRef;
-  }, []);
+  const getPicsCollection = useFirestoreCollection(db, 'picsDb');
+  const getGaleryCollection = useFirestoreCollection(db, 'galery');
 
   useEffect(() => {
-    const getpics = async () => {
-      const data = await getDocs(picsCollectionRef);
-      setPicsDb(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    const fetchCollections = async () => {
+      const dataPics = await getPicsCollection();
+      const dataGalery = await getGaleryCollection();
+
+      setPicsDb(dataPics);
+      setGaleryDb(dataGalery);
     };
 
-    getpics();
-  }, [picsCollectionRef]);
+    fetchCollections();
+  }, [getPicsCollection, getGaleryCollection]);
+
+  const value = {
+    picsDb,
+    galeryDb
+  };
 
   return (
-    <Context.Provider value={picsDb}>
+    <Context.Provider value={value}>
       {children}
     </Context.Provider>
   );
