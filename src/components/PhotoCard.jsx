@@ -15,10 +15,10 @@ const PhotoCard = ({ photo }) => {
   };
 
   return (
-    <div className="photo-card">
-      <img src={photo.link} alt={photo.descricao} />
-      <p>{photo.descricao}</p>
-      <button onClick={handleDelete}>Excluir Foto</button>
+    <div id="photo-card">
+      <img src={photo.link} alt={photo.descricao} id='photo-card-image'/>
+      <p id='photo-card-description'>{photo.descricao}</p>
+      <button onClick={handleDelete} id='photo-card-delete'>Excluir Foto</button>
     </div>
   );
 };
