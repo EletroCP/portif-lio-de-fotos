@@ -1,5 +1,5 @@
 import '../css/App.css';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Context } from '../context/ContextProvider';
 import UploadImage from './UploadImage';
 
@@ -9,19 +9,70 @@ function App() {
   }, []);
 
   const picsDb = useContext(Context);
-  const nameChange = false;
+
+  const [isEditingName, setIsEditingName] = useState(false);
+  const [isEditingSponsorshipName, setIsEditingSponsorshipName] = useState(false);
+
+  const [text, setText] = useState('Texto padrão');
+  const [sponsorshiptText, setSponsorshipText] = useState('Texto padrão');
+
+  const handleTextChange = ({target}) => {
+    setText(target.value);
+  };
+
+  const handleSponsorshipTextChange = ({ target }) => {
+    setSponsorshipText(target.value)
+  };
+
+  const toggleEditing = () => {
+    setIsEditingName(!isEditingName);
+  };
+
+  const toggleSponsorshipEdditing = () => {
+    setIsEditingSponsorshipName(!isEditingSponsorshipName);
+  };
 
   return (
     <div className="App">
       <header>
         <div id='header-name-container'>
           <h3 id='header-name-title'>Fotos tiradas por:</h3>
-          { }
+          {isEditingName ? (
+        <input
+          type="text"
+          value={text}
+          onChange={handleTextChange}
+          onBlur={toggleEditing}
+          onKeyPress={(e) => {
+            if (e.key === 'Enter') {
+              toggleEditing();
+            }
+          }}
+        />
+      ) : (
+        <p onClick={toggleEditing}>{text}</p>
+      )}
           
         </div>
         <div id='header-sponsorship-container'>
           <h3 id='header-sponsorship-title'>Patrocinado por:</h3>
-          <p id='header-sponsorship'>Exemplo</p>
+          {isEditingSponsorshipName ? (
+            <input
+              type='text'
+              value={sponsorshiptText}
+              onChange={handleSponsorshipTextChange}
+              onBlur={toggleSponsorshipEdditing}
+              onKeyPress={({key}) => {
+                if(key === 'Enter') {
+                  toggleSponsorshipEdditing();
+                };
+              }}
+            />
+          ) : (
+            <p onClick={toggleSponsorshipEdditing}>{sponsorshiptText}</p>
+          )
+
+          }
         </div>
       </header>
       <div id='main-body-title-container'>
