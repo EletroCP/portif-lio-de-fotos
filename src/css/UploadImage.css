@@ -1,0 +1,61 @@
+#heade-container {
+  background-image: none;
+  background-color: white;
+}
+
+#select-file{
+  display: none;
+  color: blueviolet;
+}
+#custom-file-label {
+  background-image: url('../rsc/uploarIcon.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 1.3em;
+  padding-left: 1.3em;
+  width: 200px;
+}
+
+#upload-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  gap: 200px;
+}
+
+#upload-button, #confirm-button{
+  width: 30px;
+  height: auto;
+}
+
+#album-title{
+  color: #eb32a7;
+  text-align: center;
+  padding: 80px 0;
+}
+
+#images-container {
+  width: 85vw;
+  margin-left: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 17px;
+}
+
+#info-container {
+  display: flex;
+  justify-content: start;
+  width: 250px;
+  color: #eb32a7;
+  gap: 45px;
+}
+
+#photo-card-data {
+  font-size: 22px;
+  padding-left: 60px;
+}
+
+.photo-card-delete{
+  width: 25px;
+}

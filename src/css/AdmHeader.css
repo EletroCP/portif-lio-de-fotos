@@ -1,0 +1,20 @@
+#header-adm-container {
+  display: flex;
+  align-items:start;
+}
+
+#home-icon-container {
+  padding: 25px;
+  width: 30px;
+  height: 10px;
+}
+
+#camicon {
+  width: 60px;
+}
+
+#Adm-title {
+  color: #eb32a7;
+  padding-left: 40vw;
+  padding-top: 15px;
+}

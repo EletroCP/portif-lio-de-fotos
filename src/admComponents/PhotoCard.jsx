@@ -1,6 +1,7 @@
 import React from 'react';
 import { db } from '../firebase/firebase';
 import { doc, deleteDoc } from 'firebase/firestore';
+import deletIcon from '../rsc/deletIcon.png';
 
 const PhotoCard = ({ photo }) => {
   const handleDelete = async () => {
@@ -16,9 +17,11 @@ const PhotoCard = ({ photo }) => {
 
   return (
     <div id="photo-card">
-      <img src={photo.link} alt={photo.descricao} id='photo-card-image'/>
-      <p id='photo-card-data'>{photo.data}</p>
-      <button onClick={handleDelete} id='photo-card-delete'>Excluir Foto</button>
+      <img src={photo.link} alt={photo.descricao} className='photo-card-image'/>
+      <div id='info-container'>
+        <p id='photo-card-data'>{photo.data}</p>
+        <img src={deletIcon} alt='Botão de deletar' onClick={handleDelete} className='photo-card-delete' />
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderAdmComponent from "../admComponents/HeaderAdmComponent";
-import UploadImage from "../components/UploadImage";
+import UploadImage from "../admComponents/UploadImage";
 import GaleryContainer from "../admComponents/GaleryContainer";
 
 const App = () => {
@@ -8,8 +8,8 @@ const App = () => {
     <div>
       <HeaderAdmComponent/>
       <UploadImage />
+      <h1 id="album-title">Fotos da chiva</h1>
       <GaleryContainer />
-      <h1>Fotos da chiva</h1>
     </div>
   );
 };

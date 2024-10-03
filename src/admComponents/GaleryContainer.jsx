@@ -9,7 +9,7 @@ const { picsDb } = useContext(Context);
 	return(
 		<div id='images-container'>
 			{picsDb.map((photo) => (
-			<div key={photo.id} className='image-container'>
+			<div key={photo.id} className='photo-card'>
 					<PhotoCard id={photo.id} photo={photo} />
 			</div>
 			))}

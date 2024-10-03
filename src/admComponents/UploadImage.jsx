@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { storage, db } from '../firebase/firebase';
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { collection, addDoc } from "firebase/firestore";
+import uploadImage from '../rsc/uploarIcon.png'
+import confirmIcon from '../rsc/confimIcon.png'
+import '../css/UploadImage.css';
 
 const UploadImage = () => {
   const [image, setImage] = useState(null);
@@ -36,9 +39,12 @@ const UploadImage = () => {
   };
 
   return (
-    <div>
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload</button>
+    <div id='upload-container'>
+      <label htmlFor='select-file' className="custom-file-label">
+        <img src={uploadImage} alt='Icone de Upload' id='upload-button'/>
+      </label>
+      <input type="file" onChange={handleFileChange} id='select-file'/>
+      <img onClick={handleUpload} src={confirmIcon} alt='Confirm button' id='confirm-button'/>
       {progress > 0 && <p>Progresso: {progress}%</p>}
     </div>
   );
