@@ -26,20 +26,29 @@
 /* Estilos para telas maiores (a partir de 480px) */
 @media (min-width: 480px) {
   #about-container {
-    width: 50vw;
-    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: 0 auto;
+    padding-top: 80px;
   }
-
+  
   #about-title {
-    font-size: 30px;
+    font-size: 44px;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #eb32a7;
   }
-
+  
   #about-text {
-    font-size: 1rem;
-    line-height: 1.5;
+    color: #eb32a7;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.4;
   }
 }
-
 /* Estilos para telas ainda maiores (a partir de 1024px) */
 @media (min-width: 1024px) {
   #about-container {
