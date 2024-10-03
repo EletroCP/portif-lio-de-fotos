@@ -1,6 +1,7 @@
 import React from "react";
 import '../css/HeaderGalery.css'
 import camIcont from '../rsc/camicon.png'
+import heartHeader from '../rsc/heartHeader.png'
 
 const HeaderComponent = () => {
   return (
@@ -20,6 +21,7 @@ const HeaderComponent = () => {
         <p id="author-name">Andrey</p>
       </div>
       <div id='sub-header'>
+        <img src={heartHeader} alt="Corações decorativos"/>
         <div id="patron-name-container">
           <p id="patron-label">Patrocinio</p>
           <p id="patron-name">Andrey</p>
