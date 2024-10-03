@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../context/ContextProvider";
-import '../css/Galery.css'
+import '../css/Galery.css';
 const Photos = () => {
   const { picsDb } = useContext(Context);
 

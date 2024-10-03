@@ -1,9 +1,12 @@
 import React from "react";
+import '../css/FooterGalery.css'
 
 const FooterComponent = () => {
   return (
     <footer>
-      <p>2024</p>
+      <div id="footer-main-container">
+        <p id="footer-content">2024</p>
+      </div>
     </footer>
   );
 };
