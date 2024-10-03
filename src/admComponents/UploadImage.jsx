@@ -9,10 +9,12 @@ import '../css/UploadImage.css';
 const UploadImage = () => {
   const [image, setImage] = useState(null);
   const [progress, setProgress] = useState(0);
+  const [imageName, setImageName] = useState('');
 
   const handleFileChange = (e) => {
     if (e.target.files[0]) {
       setImage(e.target.files[0]);
+      setImageName(e.target.files[0].name);
     }
   };
 
@@ -44,6 +46,7 @@ const UploadImage = () => {
         <img src={uploadImage} alt='Icone de Upload' id='upload-button'/>
       </label>
       <input type="file" onChange={handleFileChange} id='select-file'/>
+      {imageName && <p id='file-name'>Arquivo selecionado: {imageName}</p>}
       <img onClick={handleUpload} src={confirmIcon} alt='Confirm button' id='confirm-button'/>
       {progress > 0 && <p>Progresso: {progress}%</p>}
     </div>
