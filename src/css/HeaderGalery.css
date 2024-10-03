@@ -13,7 +13,6 @@
 }
 
 #home-icon-container {
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,38 +81,77 @@
     height: 200px;
   }
 
+  #nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 30px;
+  }
+  
   #home-icon-container {
-    width: 10vw;
-    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
+  
+  #camicon {
+    width: 50px;
+    object-fit: contain;
+  }
+  
   #nav-links-container {
-    width: 30vw;
-    gap: 15px;
+    padding-left: 150px;
+    display: flex;
   }
-
+  
   .nav-button {
-    font-size: 20px;
-    width: 85px;
+    align-items: center;
+    border-radius: 17px;
+    color: white;
+    display: flex;
+    font-size: 28px;
+    height: 30px;
+    justify-content: center;
+    width: 80px;
+    padding: 4px 16px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
   }
-
+  
   #author-name-container {
-    padding-left: 10vw;
-    font-size: 20px;
+    display: flex;
+    color: white;
+    padding-left: 12vw;
+    padding-top: 13px;
+    font-size: 27px;
+    width: 60px;
   }
-
+  
   #author-name {
-    font-size: 130px;
-    left: 25vw;
-    top: 50px;
+    font-size: 150px;
+    left: 30vw;
+    top: 55px;
+    color: #eb32a7;
+    font-family: "Satisfy", cursive;
+    text-shadow: 3px 2px 4px #fddbf0;
+    position: absolute;
   }
-
+  
+  #sub-header {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
   #patron-name-container {
-    padding-left: 60vw;
+    margin-left: 25px;
+    position: absolute;
+    top: 150px;
+    right: 10px;
   }
-
+  
   #patron-label, #patron-name {
-    font-size: 18px;
+    color: white;
+    font-size: 22px;
   }
 }
 
