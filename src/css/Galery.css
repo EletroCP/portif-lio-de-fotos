@@ -72,5 +72,38 @@
 
 /* Estilos para telas maiores (a partir de 1024px) */
 @media (min-width: 1024px) {
+  #galery-title {
+    text-align: center;
+    font-size: 44px;
+    padding: 35px 0;
+    color: #eb32a7;
+  }
   
+  #galery-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .photo-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+    overflow: hidden;
+    width: 300px;
+    padding-bottom: 45px;
+  }
+  
+  .photo-card-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: #eb32a7 2px  solid;
+  }
+  
+  .photo-card-data {
+    color: #eb32a7;
+    font-size: 24px;
+  }
 }
