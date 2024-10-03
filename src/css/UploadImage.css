@@ -20,7 +20,7 @@
   display: flex;
   justify-content: center;
   padding-top: 60px;
-  gap: 200px;
+  gap: 100px;
 }
 
 #upload-button, #confirm-button{
@@ -58,4 +58,8 @@
 
 .photo-card-delete{
   width: 25px;
+}
+
+#file-name {
+  color: #eb32a7;
 }

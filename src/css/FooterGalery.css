@@ -35,6 +35,15 @@
 
 /* Estilos para telas maiores (a partir de 1024px) */
 @media (min-width: 1024px) {
+  #footer-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    margin-top: 105px;
+    background-image: linear-gradient(135deg, #fdacdc, #ffcccc, #f460a2);
+  }
+  
   #footer-heart {
     display: flex;
     position: relative;

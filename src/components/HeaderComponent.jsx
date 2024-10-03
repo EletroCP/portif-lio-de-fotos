@@ -2,18 +2,21 @@ import React from "react";
 import '../css/HeaderGalery.css'
 import camIcont from '../rsc/camicon.png'
 import heartHeader from '../rsc/heartHeader.png'
+import { useNavigate } from "react-router-dom";
 
 const HeaderComponent = () => {
+  const navigate = useNavigate();
+
   return (
     <div id="header-container">
       <div id="nav-container">
         <div id="home-icon-container">
-          <img src={camIcont} alt="Icone de câmera" id="camicon"/>
+          <img src={camIcont} alt="Icone de câmera" id="camicon" onClick={() => navigate('/')}/>
         </div>
         <nav id="nav-links-container">
-            <p className="nav-button">Sobre</p>
-            <p className="nav-button">Fotos</p>
-            <p className="nav-button">Editar</p>
+            <a className="nav-button" href='#about-container'>Sobre</a>
+            <a className="nav-button" href='#photos-main-container'>Fotos</a>
+            <p className="nav-button"  onClick={() => navigate('/adm')}>Editar</p>
         </nav>
       </div>
       <div id="author-name-container">
