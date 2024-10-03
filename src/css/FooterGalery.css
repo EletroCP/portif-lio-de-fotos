@@ -12,6 +12,10 @@
   font-size: 16px;
 }
 
+#footer-heart {
+  display: none;
+}
+
 /* Estilos para telas maiores (a partir de 480px) */
 @media (min-width: 480px) {
 #footer-main-container {
@@ -31,5 +35,11 @@
 
 /* Estilos para telas maiores (a partir de 1024px) */
 @media (min-width: 1024px) {
-  
+  #footer-heart {
+    display: flex;
+    position: relative;
+    width: 140px;
+    bottom: 45px;
+    left: 41.1vw;
+  }
 }

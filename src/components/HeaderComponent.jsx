@@ -21,7 +21,7 @@ const HeaderComponent = () => {
         <p id="author-name">Andrey</p>
       </div>
       <div id='sub-header'>
-        <img src={heartHeader} alt="Corações decorativos"/>
+        <img src={heartHeader} alt="Corações decorativos" id="header-hearts"/>
         <div id="patron-name-container">
           <p id="patron-label">Patrocinio</p>
           <p id="patron-name">Andrey</p>

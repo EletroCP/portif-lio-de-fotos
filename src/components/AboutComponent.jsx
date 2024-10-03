@@ -12,7 +12,7 @@ const AboutComponent = () => {
         belas fotos da Shiva espro que vocÇes gostem tanto
         quanto eu, agradeço pela atenção
       </p>
-      <img src={heartAbout} alt="Corações decorativos"/>
+      <img src={heartAbout} alt="Corações decorativos" id="about-heart"/>
       <hr/>
     </div>
   ); 

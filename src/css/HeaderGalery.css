@@ -1,6 +1,6 @@
 /* Estilos para telas menores (mobile first) */
 #header-container {
-  width: 100vw;
+  width: 100%;
   background-image: linear-gradient(135deg, #fdacdc, #ffcccc, #f460a2);
   height: 150px;
 }
@@ -73,6 +73,10 @@
 #patron-label, #patron-name {
   color: white;
   font-size: 12px;
+}
+
+#header-hearts {
+  display: none;
 }
 
 /* Estilos para telas maiores (a partir de 480px) */
@@ -153,12 +157,16 @@
     color: white;
     font-size: 22px;
   }
+
+  #header-hearts {
+    display: none;
+  }
 }
 
 /* Estilos para telas ainda maiores (a partir de 1024px) */
 @media (min-width: 1024px) {
   #header-container {
-    width: 100vw;
+    width: 100%;
     background-image: linear-gradient(135deg, #fdacdc, #ffcccc, #f460a2);
     height: 150px;
   }
@@ -242,5 +250,13 @@
   #patron-label, #patron-name {
     color: white;
     font-size: 22px;
+  }
+
+  #header-hearts {
+    display: flex;
+    position: absolute;
+    width: 150px;
+    right: 0;
+    top: 0;
   }
 }

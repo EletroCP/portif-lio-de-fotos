@@ -23,6 +23,20 @@
   line-height: 1.4;
 }
 
+#about-heart {
+  width: 90px;
+  position: absolute;
+  bottom: 320px;
+  left: 10px;
+}
+
+hr {
+  border: #eb32a75e dashed .01px;
+  border-style:dashed;
+  width: 70vw;
+  margin: 50px 0;
+}
+
 /* Estilos para telas maiores (a partir de 480px) */
 @media (min-width: 480px) {
   #about-container {
@@ -47,6 +61,17 @@
     font-size: 20px;
     text-align: center;
     line-height: 1.4;
+  }
+
+  #about-heart {
+    display: none;
+  }
+
+  hr {
+    border: #eb32a75e dashed .01px;
+    border-style:dashed;
+    width: 70vw;
+    margin: 50px 0;
   }
 }
 /* Estilos para telas ainda maiores (a partir de 1024px) */
@@ -73,5 +98,13 @@
   font-size: 20px;
   text-align: center;
   line-height: 1.4;
+}
+
+#about-heart {
+  display: flex;
+  position: absolute;
+  width: 190px;
+  bottom: 0;
+  left: 10px;
 }
 }
