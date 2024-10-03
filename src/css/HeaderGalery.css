@@ -158,41 +158,89 @@
 /* Estilos para telas ainda maiores (a partir de 1024px) */
 @media (min-width: 1024px) {
   #header-container {
-    height: 220px;
+    width: 100vw;
+    background-image: linear-gradient(135deg, #fdacdc, #ffcccc, #f460a2);
+    height: 150px;
   }
-
+  
+  #nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+  
   #home-icon-container {
-    width: 5vw;
-    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
+  
+  #camicon {
+    width: 50px;
+    object-fit: contain;
+  }
+  
   #nav-links-container {
-    width: 17vw;
+    display: flex;
+    padding-left: 27.2vw;
     gap: 20px;
-    padding-right: 35vw;
   }
-
+  
   .nav-button {
+    align-items: center;
+    border-radius: 17px;
+    color: white;
+    display: flex;
     font-size: 22px;
-    width: 95px;
+    height: 30px;
+    justify-content: center;
+    width: 80px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
   }
 
+  .nav-button:hover {
+    background-color: #eb32a7;
+    border-radius: 17px;
+    font-size: 22px;
+    height: 30px;
+    width: 80px;
+  }
+  
   #author-name-container {
-    padding-left: 12vw;
+    display: flex;
+    color: white;
+    padding-left: 15vw;
+    padding-top: 28px;
     font-size: 22px;
+    width: 370px;
   }
-
+  
   #author-name {
-    font-size: 167px;
-    left: 30vw;
-    top: 60px;
+    font-size: 130px;
+    left: 32vw;
+    top: 35px;
+    color: #eb32a7;
+    font-family: "Satisfy", cursive;
+    text-shadow: 3px 2px 4px #fddbf0;
+    position: absolute;
   }
-
+  
+  #sub-header {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
   #patron-name-container {
-    padding-left: 70vw;
+    margin-left: 25px;
+    position: absolute;
+    top: 80px;
+    right: 370px;
   }
-
+  
   #patron-label, #patron-name {
+    color: white;
     font-size: 22px;
   }
 }
