@@ -1,15 +1,16 @@
+/* Estilos para telas menores (mobile first) */
 #about-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 35vw;
+  width: 90vw;
   margin: 0 auto;
-  padding-top: 130px;
+  padding-top: 50px;
 }
 
 #about-title {
-  font-size: 35px;
+  font-size: 24px;
   text-align: center;
   margin-bottom: 1rem;
   color: #eb32a7;
@@ -17,7 +18,41 @@
 
 #about-text {
   color: #eb32a7;
-  font-size: 1rem;
+  font-size: 0.875rem;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.4;
+}
+
+/* Estilos para telas maiores (a partir de 480px) */
+@media (min-width: 480px) {
+  #about-container {
+    width: 50vw;
+    padding-top: 100px;
+  }
+
+  #about-title {
+    font-size: 30px;
+  }
+
+  #about-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* Estilos para telas ainda maiores (a partir de 1024px) */
+@media (min-width: 1024px) {
+  #about-container {
+    width: 35vw;
+    padding-top: 130px;
+  }
+
+  #about-title {
+    font-size: 35px;
+  }
+
+  #about-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
 }

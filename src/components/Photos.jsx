@@ -1,20 +1,22 @@
 import React, { useContext } from "react";
 import { Context } from "../context/ContextProvider";
-
+import '../css/Galery.css'
 const Photos = () => {
   const { picsDb } = useContext(Context);
 
   return(
     <div id="photos-main-container">
-      <h1>Fotos da Praia</h1>
-      {
-        picsDb.map(({id, link, descricao}) => (
-          <div key={id}>
-            <img src={link} alt={descricao} className='photo-card-image'/>
-            <p id='photo-card-description'>{descricao}</p>
-          </div>
-        ))
-      }
+      <h1 id="galery-title">Fotos da Praia</h1>
+      <div id="galery-container">
+        {
+          picsDb.map(({id, link, descricao, data}) => (
+            <div key={id} className="photo-card-container">
+              <img src={link} alt={descricao} className='photo-card-image'/>
+              <p className='photo-card-data'>{data}</p>
+            </div>
+          ))
+        }
+      </div>
     </div>
   )
 };
