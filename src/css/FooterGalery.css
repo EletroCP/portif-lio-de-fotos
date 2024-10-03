@@ -1,0 +1,45 @@
+#footer-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  margin-top: 105px;
+  background-image: linear-gradient(135deg, #fdacdc, #ffcccc, #f460a2);
+}
+
+#footer-content {
+  color: white;
+  font-size: 16px;
+}
+
+#footer-heart {
+  display: none;
+}
+
+/* Estilos para telas maiores (a partir de 480px) */
+@media (min-width: 480px) {
+#footer-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  margin-top: 105px;
+  background-image: linear-gradient(135deg, #fdacdc, #ffcccc, #f460a2);
+}
+
+#footer-content {
+  color: white;
+  font-size: 24px;
+}
+}
+
+/* Estilos para telas maiores (a partir de 1024px) */
+@media (min-width: 1024px) {
+  #footer-heart {
+    display: flex;
+    position: relative;
+    width: 140px;
+    bottom: 45px;
+    left: 41.1vw;
+  }
+}

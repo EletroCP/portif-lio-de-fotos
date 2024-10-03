@@ -1,5 +1,6 @@
 import React from "react";
-
+import '../css/About.css';
+import heartAbout from '../rsc/heartAbout.png'
 const AboutComponent = () => {
   return (
     <div id="about-container">
@@ -11,6 +12,8 @@ const AboutComponent = () => {
         belas fotos da Shiva espro que vocÇes gostem tanto
         quanto eu, agradeço pela atenção
       </p>
+      <img src={heartAbout} alt="Corações decorativos" id="about-heart"/>
+      <hr/>
     </div>
   ); 
 };
