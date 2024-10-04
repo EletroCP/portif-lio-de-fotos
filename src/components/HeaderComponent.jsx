@@ -11,7 +11,7 @@ const HeaderComponent = () => {
     <div id="header-container">
       <div id="nav-container">
         <div id="home-icon-container">
-          <img src={camIcont} alt="Icone de câmera" id="camicon" onClick={() => navigate('/')}/>
+          <img src={camIcont} alt="Icone de câmera" id="camicon" onClick={() => navigate('/login')}/>
         </div>
         <nav id="nav-links-container">
             <a className="nav-button" href='#about-container'>Sobre</a>
