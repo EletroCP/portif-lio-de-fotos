@@ -8,7 +8,7 @@ const App = () => {
     <div>
       <HeaderAdmComponent/>
       <UploadImage />
-      <h1 id="album-title">Fotos da chiva</h1>
+      <h1 id="album-title">Fotos da Shiva</h1>
       <GaleryContainer />
     </div>
   );
