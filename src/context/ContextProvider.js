@@ -11,7 +11,7 @@ function ContextProvider({ children }) {
   const [vidsDb, setVidsDb] = useState([]);
 
   const getPicsCollection = useFirestoreCollection(db, 'picsDb');
-  const getVidsCollection = useFirestoreCollection(db, 'vidsDb');
+  const getVidsCollection = useFirestoreCollection(db, 'videoDb');
   const getGaleryCollection = useFirestoreCollection(db, 'galery');
 
   useEffect(() => {

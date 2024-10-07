@@ -1,56 +1,83 @@
 import React, { useState } from 'react';
 import { storage, db } from '../firebase/firebase';
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { collection, addDoc } from "firebase/firestore";
-import uploadImage from '../rsc/uploarIcon.png'
-import confirmIcon from '../rsc/confimIcon.png'
+import uploadImage from '../rsc/uploarIcon.png';
+import confirmIcon from '../rsc/confimIcon.png';
 import '../css/UploadImage.css';
 
-const UploadImage = () => {
-  const [image, setImage] = useState(null);
+const UploadMedia = () => {
+  const [file, setFile] = useState(null);
   const [progress, setProgress] = useState(0);
-  const [imageName, setImageName] = useState('');
+  const [fileName, setFileName] = useState('');
+  const [fileType, setFileType] = useState('');
 
   const handleFileChange = (e) => {
-    if (e.target.files[0]) {
-      setImage(e.target.files[0]);
-      setImageName(e.target.files[0].name);
+    const selectedFile = e.target.files[0];
+    if (selectedFile) {
+      setFile(selectedFile);
+      setFileName(selectedFile.name);
+      setFileType(selectedFile.type.startsWith('image/') ? 'image' : 'video');
     }
   };
 
   const handleUpload = () => {
-    if (!image) return;
+    if (!file) return;
 
-    const storageRef = ref(storage, `images/${image.name}`);
-    const uploadTask = uploadBytes(storageRef, image);
+    const folder = fileType === 'image' ? 'images' : 'videos';
+    const storageRef = ref(storage, `${folder}/${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file);
 
-    uploadTask
-      .then(() => {
-        getDownloadURL(storageRef).then((url) => {
-          addDoc(collection(db, 'picsDb'), {
-            descricao: "Uma descrição da sua imagem",
+    uploadTask.on(
+      'state_changed',
+      (snapshot) => {
+        const progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+        setProgress(progress);
+      },
+      (error) => {
+        console.error('Erro ao fazer upload:', error);
+      },
+      () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((url) => {
+          addDoc(collection(db, fileType === 'image' ? 'picsDb' : 'videoDb'), {
+            descricao: `Uma descrição do seu ${fileType}`,
             link: url,
-            name: image.name,
+            name: file.name,
             data: new Date().toLocaleDateString(),
           });
 
           setProgress(100);
         });
-      })
-      .catch((error) => console.error('Erro ao fazer upload:', error));
+      }
+    );
   };
 
   return (
     <div id='upload-container'>
       <label htmlFor='select-file' className="custom-file-label">
-        <img src={uploadImage} alt='Icone de Upload' id='upload-button'/>
+        <img src={uploadImage} alt='Ícone de Upload' id='upload-button' />
       </label>
-      <input type="file" onChange={handleFileChange} id='select-file'/>
-      {imageName && <p id='file-name'>Arquivo selecionado: {imageName}</p>}
-      <img onClick={handleUpload} src={confirmIcon} alt='Confirm button' id='confirm-button'/>
+      
+      <input
+        type="file"
+        accept="image/*,video/*"
+        onChange={handleFileChange}
+        id='select-file'
+      />
+      
+      {fileName && <p id='file-name'>Arquivo selecionado: {fileName}</p>}
+      
+      <img
+        onClick={handleUpload}
+        src={confirmIcon}
+        alt='Botão de confirmação'
+        id='confirm-button'
+        style={{ cursor: file ? 'pointer' : 'not-allowed' }}
+      />
+      
       {progress > 0 && <p>Progresso: {progress}%</p>}
     </div>
   );
 };
 
-export default UploadImage;
+export default UploadMedia;
