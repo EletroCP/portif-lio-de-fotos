@@ -21,13 +21,13 @@ const HeaderComponent = () => {
       </div>
       <div id="author-name-container">
         <p id="author-label">Fotos tiradas por</p>
-        <p id="author-name">Andrey</p>
+        <p id="author-name">Tei</p>
       </div>
       <div id='sub-header'>
         <img src={heartHeader} alt="Corações decorativos" id="header-hearts"/>
         <div id="patron-name-container">
           <p id="patron-label">Patrocinio</p>
-          <p id="patron-name">Andrey</p>
+          <p id="patron-name">2chocolaa</p>
         </div>
       </div>
     </div>
