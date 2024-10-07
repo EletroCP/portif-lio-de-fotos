@@ -1,12 +1,7 @@
-#video-card{
-  border:  solid 1px #eb32a7;
-  width: 350px;
-  height: 195px;
-}
 
 #video-card-data {
   font-size: 22px;
-  padding-left: 75px;
+  padding-left: 60px;
 }
 
 .video-card-delete {
