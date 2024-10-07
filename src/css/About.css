@@ -1,0 +1,110 @@
+/* Estilos para telas menores (mobile first) */
+#about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+#about-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #eb32a7;
+}
+
+#about-text {
+  color: #eb32a7;
+  font-size: 0.875rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+#about-heart {
+  width: 90px;
+  position: absolute;
+  bottom: 320px;
+  left: 10px;
+}
+
+hr {
+  border: #eb32a75e dashed .01px;
+  border-style:dashed;
+  width: 70vw;
+  margin: 50px 0;
+}
+
+/* Estilos para telas maiores (a partir de 480px) */
+@media (min-width: 480px) {
+  #about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+  
+  #about-title {
+    font-size: 44px;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #eb32a7;
+  }
+  
+  #about-text {
+    color: #eb32a7;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  #about-heart {
+    display: none;
+  }
+
+  hr {
+    border: #eb32a75e dashed .01px;
+    border-style:dashed;
+    width: 70vw;
+    margin: 50px 0;
+  }
+}
+/* Estilos para telas ainda maiores (a partir de 1024px) */
+@media (min-width: 1024px) {
+#about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+#about-title {
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #eb32a7;
+}
+
+#about-text {
+  color: #eb32a7;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+#about-heart {
+  display: flex;
+  position: absolute;
+  width: 190px;
+  bottom: 0;
+  left: 10px;
+}
+}

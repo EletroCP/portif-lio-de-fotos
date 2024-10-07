@@ -1,0 +1,262 @@
+/* Estilos para telas menores (mobile first) */
+#header-container {
+  width: 100%;
+  background-image: linear-gradient(135deg, #fdacdc, #ffcccc, #f460a2);
+  height: 150px;
+}
+
+#nav-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+#home-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#camicon {
+  width: 50px;
+  object-fit: contain;
+}
+
+#nav-links-container {
+  width: 80%;
+  display: flex;
+}
+
+.nav-button {
+  align-items: center;
+  border-radius: 17px;
+  color: white;
+  display: flex;
+  font-size: 18px;
+  height: 30px;
+  justify-content: center;
+  width: 80px;
+  padding: 2px 8px;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+#author-name-container {
+  display: flex;
+  color: white;
+  padding-left: 5vw;
+  padding-top: 13px;
+  font-size: 18px;
+  width: 60px;
+}
+
+#author-name {
+  font-size: 80px;
+  left: 30vw;
+  top: 35px;
+  color: #eb32a7;
+  font-family: "Satisfy", cursive;
+  text-shadow: 3px 2px 4px #fddbf0;
+  position: absolute;
+}
+
+#sub-header {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#patron-name-container {
+  margin-left: 25px;
+}
+
+#patron-label, #patron-name {
+  color: white;
+  font-size: 12px;
+}
+
+#header-hearts {
+  display: none;
+}
+
+/* Estilos para telas maiores (a partir de 480px) */
+@media (min-width: 480px) {
+  #header-container {
+    height: 200px;
+  }
+
+  #nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 30px;
+  }
+  
+  #home-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #camicon {
+    width: 50px;
+    object-fit: contain;
+  }
+  
+  #nav-links-container {
+    padding-left: 150px;
+    display: flex;
+  }
+  
+  .nav-button {
+    align-items: center;
+    border-radius: 17px;
+    color: white;
+    display: flex;
+    font-size: 28px;
+    height: 30px;
+    justify-content: center;
+    width: 80px;
+    padding: 4px 16px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+  }
+  
+  #author-name-container {
+    display: flex;
+    color: white;
+    padding-left: 12vw;
+    padding-top: 13px;
+    font-size: 27px;
+    width: 60px;
+  }
+  
+  #author-name {
+    font-size: 150px;
+    left: 25vw;
+    top: 55px;
+    color: #eb32a7;
+    font-family: "Satisfy", cursive;
+    text-shadow: 3px 2px 4px #fddbf0;
+    position: absolute;
+  }
+  
+  #sub-header {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #patron-name-container {
+    margin-left: 25px;
+    position: absolute;
+    top: 150px;
+    right: 35px;
+  }
+  
+  #patron-label, #patron-name {
+    color: white;
+    font-size: 22px;
+  }
+
+  #header-hearts {
+    display: none;
+  }
+}
+
+/* Estilos para telas ainda maiores (a partir de 1024px) */
+@media (min-width: 1024px) {
+  #header-container {
+    width: 100%;
+    background-image: linear-gradient(135deg, #fdacdc, #ffcccc, #f460a2);
+    height: 150px;
+  }
+  
+  #nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+  
+  #home-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #camicon {
+    width: 50px;
+    object-fit: contain;
+  }
+  
+  #nav-links-container {
+    display: flex;
+    padding-left: 27.2vw;
+    gap: 20px;
+  }
+  
+  .nav-button {
+    align-items: center;
+    border-radius: 17px;
+    color: white;
+    display: flex;
+    font-size: 22px;
+    height: 30px;
+    justify-content: center;
+    width: 80px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+  }
+
+  .nav-button:hover {
+    background-color: #eb32a7;
+    border-radius: 17px;
+    font-size: 22px;
+    height: 30px;
+    width: 80px;
+  }
+  
+  #author-name-container {
+    display: flex;
+    color: white;
+    padding-left: 15vw;
+    padding-top: 28px;
+    font-size: 22px;
+    width: 370px;
+  }
+  
+  #author-name {
+    font-size: 130px;
+    left: 32vw;
+    top: 35px;
+    color: #eb32a7;
+    font-family: "Satisfy", cursive;
+    text-shadow: 3px 2px 4px #fddbf0;
+    position: absolute;
+  }
+  
+  #sub-header {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #patron-name-container {
+    margin-left: 25px;
+    position: absolute;
+    top: 80px;
+    right: 370px;
+  }
+  
+  #patron-label, #patron-name {
+    color: white;
+    font-size: 22px;
+  }
+
+  #header-hearts {
+    display: flex;
+    position: absolute;
+    width: 150px;
+    right: 0;
+    top: 0;
+  }
+}
