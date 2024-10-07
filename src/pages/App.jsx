@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import HeaderAdmComponent from "../admComponents/HeaderAdmComponent";
 import UploadImage from "../admComponents/UploadImage";
@@ -8,8 +8,6 @@ import { auth } from "../firebase/firebase";
 
 const App = () => {
   const navigate = useNavigate();
-  //utilizar o loading, para uma futura tela de carregamento
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const token = localStorage.getItem("authToken");
@@ -19,12 +17,11 @@ const App = () => {
     }
 
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setLoading(false);
-      } else {
+      if (!user) {
         navigate("/login");
       }
     });
+
     unsubscribe();
   }, [navigate]);
 
