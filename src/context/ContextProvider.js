@@ -8,25 +8,30 @@ export const Context = createContext();
 function ContextProvider({ children }) {
   const [picsDb, setPicsDb] = useState([]);
   const [galeryDb, setGaleryDb] = useState([]);
+  const [vidsDb, setVidsDb] = useState([]);
 
   const getPicsCollection = useFirestoreCollection(db, 'picsDb');
+  const getVidsCollection = useFirestoreCollection(db, 'vidsDb');
   const getGaleryCollection = useFirestoreCollection(db, 'galery');
 
   useEffect(() => {
     const fetchCollections = async () => {
       const dataPics = await getPicsCollection();
       const dataGalery = await getGaleryCollection();
+      const dataVids = await getVidsCollection();
 
       setPicsDb(dataPics);
       setGaleryDb(dataGalery);
+      setVidsDb(dataVids);
     };
 
     fetchCollections();
-  }, [getPicsCollection, getGaleryCollection]);
+  }, [getPicsCollection, getGaleryCollection, getVidsCollection]);
 
   const value = {
     picsDb,
-    galeryDb
+    galeryDb,
+    vidsDb
   };
 
   return (

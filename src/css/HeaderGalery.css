@@ -218,7 +218,7 @@
   #author-name-container {
     display: flex;
     color: white;
-    padding-left: 15vw;
+    padding-left: 23vw;
     padding-top: 28px;
     font-size: 22px;
     width: 370px;
@@ -226,7 +226,7 @@
   
   #author-name {
     font-size: 130px;
-    left: 32vw;
+    left: 40vw;
     top: 35px;
     color: #eb32a7;
     font-family: "Satisfy", cursive;
