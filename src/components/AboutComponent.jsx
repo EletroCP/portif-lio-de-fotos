@@ -9,7 +9,7 @@ const AboutComponent = () => {
       </h1>
       <p id="about-text">
         Esse site foi feito com o proposito de divulgar
-        belas fotos da Shiva espro que vocÇes gostem tanto
+        belas fotos da Shiva espero que voçês gostem tanto
         quanto eu, agradeço pela atenção
       </p>
       <img src={heartAbout} alt="Corações decorativos" id="about-heart"/>
