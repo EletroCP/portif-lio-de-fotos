@@ -14,6 +14,13 @@
   object-fit: cover;
   border: #eb32a7 2px solid;
 }
+.video-card-video:fullscreen {
+  object-fit: contain;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+
 
 .video-card-data {
   color: #eb32a7;
